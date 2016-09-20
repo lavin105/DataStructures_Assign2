@@ -1,3 +1,10 @@
+#ifndef GAME_OF_LIFE_H
+#define GAME_OF_LIFE_H
+
+#include <iostream>
+
+using namespace std;
+
 
 const int size = 50;
 
@@ -9,3 +16,4 @@ bool Life(BoardType Board, int Row, int Col);
 
 void populate(BoardType Board, BoardType Board2);
 
+#endif

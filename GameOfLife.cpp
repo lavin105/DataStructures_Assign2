@@ -1,7 +1,4 @@
-#include <iostream>
 #include "GameOfLife.h"
-
-using namespace std;
 
 
 /* Given:   Board	A 2D array of type Bool, serving as the matrix for our game

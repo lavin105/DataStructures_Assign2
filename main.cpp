@@ -1,8 +1,5 @@
 #include "Main.h"
-#include "GameOfLife.h"
-#include <iostream>
 
-using namespace std;
 
 int main() {
     int Iteration = 0; // needed here to count the use of the display function
