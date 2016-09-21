@@ -5,15 +5,26 @@
 
 using namespace std;
 
+class GameOfLife
+{
+public:
 
-const int size = 50;
+	GameOfLife();
 
-typedef bool BoardType[size][size];
+	~GameOfLife();
 
-void display(BoardType Board, int &iteration);
+	static const int size = 50;
 
-bool Life(BoardType Board, int Row, int Col);
+	typedef bool BoardType[size][size];
 
-void populate(BoardType Board, BoardType Board2);
+	void display(BoardType Board, int &iteration);
+
+	bool Life(BoardType Board, int Row, int Col);
+
+	void populate(BoardType Board, BoardType Board2);
+
+	inline int NumLiveNeighbors(BoardType Board, int Row, int Col);
+
+};
 
 #endif

@@ -2,13 +2,17 @@
 
 
 int main() {
+	GameOfLife sim;
     int Iteration = 0; // needed here to count the use of the display function
     int cycle;
-    BoardType Board2;
-    BoardType Board;
-    for (int i = 1; i < size; i++) {
-        for (int j = 1; j < size; j++) {
-            Board[i][j] = rand() % 2 == 1;
+	GameOfLife::BoardType Board2;
+	GameOfLife::BoardType Board;
+	for (int i = 1; i < GameOfLife::size; i++)
+	{
+		for (int j = 1; j < GameOfLife::size; j++)
+		{
+
+			Board[i][j] = ((double) rand() / (RAND_MAX)) >= .5;
         }
     }
 
@@ -19,14 +23,14 @@ int main() {
     cout << "Press CTRL + C to exit at any time." << endl;
     system("sleep .5");
     system("clear");
-    display(Board, Iteration);
+	sim.display(Board, Iteration);
     cout << endl << endl << endl;
 
     for (int i = 1; i <= cycle; i++) {
         system("sleep .5");
         system("clear");
-        populate(Board, Board2);
-        display(Board, Iteration);
+		sim.populate(Board, Board2);
+		sim.display(Board, Iteration);
     }
 
     return 0;
