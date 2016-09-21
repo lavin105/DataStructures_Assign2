@@ -1,5 +1,6 @@
-#include "main.h"
+#include "GameOfLife.h"
 
+using namespace std;
 
 int main() {
 	GameOfLife sim;
